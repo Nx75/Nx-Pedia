@@ -1,188 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nx-Pedia – The Modern, Beautiful Wikipedia Experience</title>
-
-    <meta name="description"
-        content="Nx-Pedia reimagines Wikipedia with a stunning, intuitive and beautifully designed interface — clearer reading, smoother navigation, and a more enjoyable way to discover and learn." />
-    <meta name="keywords"
-        content="wikipedia, encyclopedia, knowledge, modern wikipedia, beautiful ui, free knowledge" />
-    <meta name="author" content="Nx75 / Nx-Pedia Team" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Nx-Pedia – Modern & Beautiful Encyclopedia" />
-    <meta property="og:description"
-        content="Wikipedia reimagined — explore knowledge with a cleaner, more intuitive, and visually stunning interface." />
-    <!--meta property="og:url" content="https://nxpedia.vercel.app" />
-    <meta property="og:image" content="/assets/img/NxPediaBanner.png" /-->
-    <meta property="og:site_name" content="Nx-Pedia" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nx-Pedia – Modern & Beautiful Encyclopedia" />
-    <meta name="twitter:description"
-        content="Wikipedia reimagined — explore knowledge with a cleaner, more intuitive, and visually stunning interface." />
-    <meta name="twitter:image" content="/assets/img/NxPediaBanner.png" />
-
-    <!-- Canonical URL -->
-    <!--link rel="canonical" href="https://nxpedia.vercel.app" />
-    <link rel="icon" type="image/x-icon" href="/assets/img/NxPedia.png" /-->
-
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="/assets/js/scrollReveal.js" defer></script>
-    <script src="/assets/js/navbarResponsive.js" defer></script>
-    <script src="/assets/js/index.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
-
 <body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <div class="logo-container">
-            <a href="/" class="logo"><img src="/assets/img/nxpedia.png" alt="Nx-Pedia Logo" /></a>
-            <span>Nx-Pedia</span>
-        </div>
-
-        <div class="burger-container">
-            <div class="burger" onclick="toggleMenu()">☰</div>
-        </div>
-
-        <nav class="menu">
-            <a href="#features">Features</a>
-            <a href="#explore">Explore</a>
-            <a href="/tools/">Tools</a>
-            <a href="/docs.html" target="_blank" rel="noopener noreferrer">Docs</a>
-            <a href="https://github.com/Nx75/Nx-Pedia" target="_blank" rel="noopener noreferrer">Github</a>
-            <a href="explore.html">Start Reading</a>
-        </nav>
+    <header>
+    <div class="logo">
+        <a href="/">Testing</a>
     </div>
 
-    <main>
-        <!-- HERO -->
-        <section class="hero">
-            <h1>Knowledge,<br />Beautifully Reimagined.</h1>
-            <p>
-                Nx-Pedia brings Wikipedia into the modern era — with a stunning, intuitive interface, effortless
-                reading, smooth navigation, and a truly enjoyable way to explore and learn.
-            </p>
-            <a href="explore.html">Start Exploring</a>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#">Testing</a></li>
+            <li><a href="#">Testing</a></li>
+            <li><a href="#">Testing</a></li>
+            <li><a href="#">Testing</a></li>
+        </ul>
+    </nav>
 
-        <!-- Demo -->
-        <section class="demo">
-            <h2>See Nx-Pedia in Action</h2>
-            <p>A cleaner, calmer, and more delightful way to discover knowledge.</p>
-            <video autoplay muted loop>
-                <source src="/assets/vid/NxPediaDemo.mp4" type="video/mp4" />
-                <img src="/assets/img/NxPediaBanner.png" alt="Nx-Pedia Banner" />
-
-                <p>Your browser does not support the video tag.</p>
-            </video>
-        </section>
-
-        <!-- Features -->
-        <section class="features" id="features">
-            <h2>Why Nx-Pedia?</h2>
-            <p>
-                We built the encyclopedia experience that actually feels good to use.
-            </p>
-
-            <div class="feature">
-                <div class="feature-container load-hidden">
-                    <div>
-                        <h3>Beautiful & Modern Interface</h3>
-                        <p>
-                            Clean typography, generous spacing, soft colors — designed for long, focused reading without
-                            eye strain.
-                        </p>
-                    </div>
-                    <img src="/assets/img/Banner1.png" alt="Beautiful modern reading interface" />
-                </div>
-
-                <div class="feature-container load-hidden">
-                    <div>
-                        <h3>Effortless Navigation</h3>
-                        <p>
-                            Intuitive sidebar, fast search, smooth scrolling, dark mode — find and move between topics
-                            instantly.
-                        </p>
-                    </div>
-                    <img src="/assets/img/Banner2.png" alt="Smooth navigation and search" />
-                </div>
-
-                <div class="feature-container load-hidden">
-                    <div>
-                        <h3>Calm & Focused Reading</h3>
-                        <p>
-                            Distraction-free mode, adjustable typography, gentle animations — knowledge absorption, not
-                            information overload.
-                        </p>
-                    </div>
-                    <img src="/assets/img/Banner3.png" alt="Focused reading experience" />
-                </div>
-
-                <div class="feature-container load-hidden">
-                    <div>
-                        <h3>Open & Extensible</h3>
-                        <p>
-                            Free, open source, API access — use, fork, build tools, integrate, or host your own version.
-                        </p>
-                    </div>
-                    <img src="/assets/img/Banner5.png" alt="Open source and API" />
-                </div>
-            </div>
-        </section>
-
-        <!-- Explore / Pricing alternative -->
-        <section class="pricing" id="explore">
-            <h2>Start Exploring Knowledge</h2>
-            <p>It's completely free — no limits, no ads, no catch.</p>
-
-            <div class="plans">
-                <div class="plans-container load-hidden" id="plan-free">
-                    <h3>Always Free</h3>
-                    <p>Unlimited access for everyone</p>
-                    <ul>
-                        <li>Available articles & topics</li>
-                        <li>Dark mode</li>
-                        <li>Search & navigation (work in progress)</li>
-                        <li>Offline reading (planned)</li>
-                        <li>Open source</li>
-                    </ul>
-                    <h3>$0 / forever</h3>
-                    <a class="plans-button" href="explore.html">Start Reading Now</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta load-hidden">
-            <h1>Knowledge just a click away.</h1>
-            <p>Dive into a better way to learn — right now, completely free.</p>
-            <a href="explore.html">Start Exploring</a>
-        </section>
-
-        <!-- Footer -->
-        <section class="footer">
-            <div class="footer-container">
-                <img src="/assets/img/NxPedia.png" alt="Nx-Pedia Logo" />
-                <h2>Nx-Pedia</h2>
-                <p>The modern encyclopedia — beautiful, calm, and open.</p>
-                <p class="copyright">© 2025 Nx-Pedia. All rights reserved.</p>
-            </div>
-            <a href="explore.html">Start Reading</a>
-        </section>
-    </main>
+    <button class="nav-button">
+        Testing
+    </button>
+</header>
 </body>
-
 </html>
