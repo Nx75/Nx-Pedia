@@ -1,20 +1,33 @@
+/* =========================
+   GLOBAL
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* NAVBAR */
+body {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    overflow: hidden; /* prevents scroll if perfectly sized */
+}
+
+/* =========================
+   NAVBAR
+========================= */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    height: 65px;
+    padding: 0 2rem;
     border-bottom: 2px solid black;
 }
 
 .logo {
-    padding: 1rem;
+    padding-right: 1.5rem;
     border-right: 2px solid black;
 }
 
@@ -26,11 +39,12 @@ header {
 
 nav {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
     list-style: none;
     gap: 3rem;
 }
@@ -40,43 +54,77 @@ nav a {
     color: black;
 }
 
-nav a:hover {
-    color: gray;
-}
-
 .nav-button {
-    padding: 0.6rem 1.2rem;
+    padding: 0.4rem 1rem;
     border: 2px solid black;
     background: transparent;
     cursor: pointer;
 }
 
-/* MAIN SECTION */
+/* =========================
+   MAIN SECTION (100vh total control)
+========================= */
 .main {
+    height: calc(100vh - 125px); 
+    /* 100vh - (65px navbar + 60px footer) */
     display: flex;
     justify-content: center;
+    border-bottom: 2px solid black;
 }
 
 .container {
-    margin: 3rem;
-    border: 2px solid black;
-    height: 70vh;
     width: 100%;
     max-width: 1200px;
-}
-.container img{
-    height: 70vh;
-    width: 100%;
-}
-.text {
-    margin-top: 4rem;
-    padding-right: 2rem;
+    display: flex;
+    border: 2px solid black;
+    height: 100%;
 }
 
-.footer{
-       display: flex;
+/* IMAGE SIDE */
+.container img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-right: 2px solid black;
+}
+
+/* TEXT SIDE */
+.text {
+    width: 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    height: 60px;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+    justify-content: center;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
     border-top: 2px solid black;
+    padding-top: 1.5rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
