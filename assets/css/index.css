@@ -5,13 +5,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
     border-left: 2px solid black;
     border-right: 2px solid black;
-    overflow: hidden; /* prevents scroll if perfectly sized */
+    overflow: hidden;
 }
 
 /* =========================
@@ -34,7 +34,10 @@ header {
 .logo a {
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 nav {
@@ -52,6 +55,9 @@ nav ul {
 nav a {
     text-decoration: none;
     color: black;
+    font-weight: 400;
+    font-size: 0.95rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .nav-button {
@@ -59,14 +65,16 @@ nav a {
     border: 2px solid black;
     background: transparent;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* =========================
-   MAIN SECTION (100vh total control)
+   MAIN SECTION 
 ========================= */
 .main {
-    height: calc(100vh - 125px); 
-    /* 100vh - (65px navbar + 60px footer) */
+    height: calc(100vh - 125px);
     display: flex;
     justify-content: center;
     border-bottom: 2px solid black;
@@ -80,7 +88,6 @@ nav a {
     height: 100%;
 }
 
-/* IMAGE SIDE */
 .container img {
     width: 50%;
     height: 100%;
@@ -88,14 +95,29 @@ nav a {
     border-right: 2px solid black;
 }
 
-/* TEXT SIDE */
 .text {
     width: 50%;
     padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 1.6;
+}
+
+.text h1 {
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, Baskerville, Georgia, serif;
+    font-weight: 500;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.text p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2b2b2b;
+    max-width: 85%;
 }
 
 /* =========================
@@ -106,6 +128,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.85rem;
+    color: #5a5a5a;
 }
 
 /* =========================
@@ -114,17 +139,25 @@ footer {
 .features {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
     margin-top: 2rem;
     border-top: 2px solid black;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
 }
 
 .feature-card h3 {
-    margin-bottom: 0.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
 
 .feature-card p {
-    font-size: 0.95rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.9rem;
     line-height: 1.4;
+    color: #4a4a4a;
+    max-width: 100%;
 }
