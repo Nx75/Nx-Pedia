@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 65px;
+            padding: 0 2rem;
+            border-bottom: 2px solid black;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            padding-right: 1.5rem;
+            border-right: 2px solid black;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: -0.01em;
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .nav-button {
+            padding: 0.4rem 1rem;
+            border: 2px solid black;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .nav-button:hover {
+            background: black;
+            color: white;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid black;
+            min-height: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 550px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            padding: 2rem 2rem;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        .container h1 {
+            font-family: 'Cormorant Garamond', 'Times New Roman', Times, Baskerville, Georgia, serif;
+            font-weight: 500;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .container p {
+            font-size: 1rem;
+            line-height: 1.4;
+            color: #2b2b2b;
+            max-width: 80%;
+            margin-bottom: 1.5rem;
+        }
+
+        .coming-soon-badge {
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid black;
+            padding-bottom: 0.4rem;
+            display: inline-block;
+        }
+
+        .features-section {
+            width: 100%;
+            margin-top: 1.5rem;
+            border-top: 2px solid black;
+            padding-top: 1.5rem;
+        }
+
+        .features-grid {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .feature-item {
+            border: 2px solid black;
+            padding: 0.75rem;
+            text-align: center;
+            flex: 1;
+        }
+
+        .feature-item h3 {
+            font-weight: 500;
+            font-size: 0.8rem;
+            margin-bottom: 0.2rem;
+            text-transform: uppercase;
+        }
+
+        .feature-item p {
+            font-size: 0.75rem;
+            color: #4a4a4a;
+            max-width: 100%;
+            margin-bottom: 0;
+        }
+
+        .back-link {
+            margin-top: 1.5rem;
+        }
+
+        .back-link a {
+            color: black;
+            text-decoration: none;
+            border-bottom: 2px solid black;
+            padding-bottom: 0.15rem;
+            font-size: 0.85rem;
+        }
+
+        .back-link a:hover {
+            border-bottom: 2px solid transparent;
+        }
+
+        footer {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #5a5a5a;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">NXpedia</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="../assets/coming_soon.html">Explore</a></li>
+                <li><a href="../assets/coming_soon.html">Search</a></li>
+                <li><a href="https://github.com/Nx75/Nx-Pedia.git" target="_blank">Contribute</a></li>
+                <li><a href="../assets/coming_soon.html">About</a></li>
+            </ul>
+        </nav>
+        <button class="nav-button">BACK</button>
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <span class="coming-soon-badge">COMING SOON</span>
+            <h1>FEATURE<br>UNAVAILABLE</h1>
+            <p>This feature is currently under development. We're working hard to bring it to you soon.</p>
+
+            <div class="features-section">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>IN PROGRESS</h3>
+                        <p>Currently being built</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>ESTIMATED</h3>
+                        <p>Q2 2026</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>STATUS</h3>
+                        <p>Development</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-link">
+                <a href="/">← BACK TO HOME</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 FEATURES. ALL RIGHTS RESERVED.
+    </footer>
+</body>
+
+</html>
