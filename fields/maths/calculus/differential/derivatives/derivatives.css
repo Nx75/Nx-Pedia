@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    padding: 0 2rem;
+    border-bottom: 2px solid black;
+    flex-shrink: 0;
+}
+
+.logo {
+    padding-right: 1.5rem;
+    border-right: 2px solid black;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.page-heading {
+    padding: 1.5rem 2rem 0.5rem;
+    border-bottom: 2px solid black;
+}
+
+.page-heading h1 {
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, Baskerville, Georgia, serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+.page-heading p {
+    color: #4a4a4a;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    border-bottom: 2px solid black;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 200px;
+    border-right: 2px solid black;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+
+.sidebar h2 {
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    transition: padding-left 0.2s ease;
+}
+
+.sidebar a:hover {
+    padding-left: 0.5rem;
+    background-color: #f0f0f0;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.text-container {
+    border-right: 2px solid black;
+    padding: 1.5rem;
+    flex: 1;
+    line-height: 1.6;
+    color: #333;
+}
+
+.text-container h2 {
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.text-container p {
+    margin-bottom: 1rem;
+}
+
+.data-container {
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 300px;
+}
+
+.data-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+}
+
+/* Footer styles */
+footer {
+    border-top: 2px solid black;
+    background-color: #fafafa;
+    padding: 2rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.references-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.references-list li {
+    display: flex;
+    align-items: baseline;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.references-list li:last-child {
+    border-bottom: none;
+}
+
+.ref-number {
+    font-family: monospace;
+    color: #666;
+    min-width: 40px;
+    font-size: 0.85rem;
+}
+
+.references-list a {
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+.references-list a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.ref-title {
+    color: #333;
+    margin-right: 0.5rem;
+    font-style: italic;
+}
+
+.ref-source {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.footer-bottom a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+    
+    .text-container {
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+    
+    .data-container {
+        width: 100%;
+    }
+    
+    .references-list li {
+        flex-wrap: wrap;
+    }
+    
+    .ref-number {
+        min-width: 30px;
+    }
+}
