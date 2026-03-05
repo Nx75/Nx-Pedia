@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derivatives</title>
+    <title>Derivatives · NXpedia</title>
     <link rel="stylesheet" href="derivatives.css">
 </head>
 
@@ -26,30 +26,190 @@
 
     <div class="page-heading">
         <h1>Derivative</h1>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>power rule · product rule · quotient rule · chain rule · constant rule · sum/difference rule · elementary
+            functions</p>
     </div>
+
     <div class="main">
         <div class="sidebar">
             <h2>Menu</h2>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#power-rule">Power Rule</a>
+            <a href="#product-rule">Product Rule</a>
+            <a href="#quotient-rule">Quotient Rule</a>
+            <a href="#chain-rule">Chain Rule</a>
+            <a href="#const-sumdiff">Constant / Sum/Difference</a>
+            <a href="#elementary">Elementary functions</a>
+            <a href="#references">References</a>
         </div>
+
         <div class="text-container">
-            <h2>What is a Derivative?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed accusamus iure odit enim mollitia quis numquam
-            cumque quasi exercitationem? Labore magni harum facere molestiae id. Saepe voluptatem voluptate provident.
-            Voluptatum, vero laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis eu magna facilisis tincidunt.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+            <h2>Definition of a Derivative</h2>
+            <p>The derivative of a function <em>f</em> at a point <em>x</em> measures the instantaneous rate of change —
+                the slope of the tangent line to the graph of <em>f</em>. Formally, it is defined by the limit:</p>
+            <p style="font-family: 'Courier New', monospace; background: #f2f2f2; padding: 0.5rem;">f'(x) = lim_{h→0}
+                (f(x+h) − f(x)) / h</p>
+            <p>Differentiation is the process of finding this derivative. It is a fundamental tool in mathematics,
+                physics, engineering, and economics, used to model velocities, marginal costs, growth rates, and
+                optimization problems.</p>
+
+            <h3 style="margin: 2rem 0 0.5rem;">Essential differentiation rules</h3>
+            <div class="rule-grid">
+                <div class="rule-card" id="power-rule">
+                    <strong>Power Rule</strong>
+                    <div class="formula">d/dx [ xⁿ ] = n·xⁿ⁻¹</div>
+                    <p>Holds for any real exponent n. Example: d/dx [ x³ ] = 3x²; d/dx [ √x ] = (1/2)x^{-1/2}.</p>
+                </div>
+                <div class="rule-card" id="product-rule">
+                    <strong>Product Rule</strong>
+                    <div class="formula">(f·g)' = f'·g + f·g'</div>
+                    <p>The derivative of a product is the derivative of the first times the second plus the first times
+                        the derivative of the second.</p>
+                </div>
+                <div class="rule-card" id="quotient-rule">
+                    <strong>Quotient Rule</strong>
+                    <div class="formula">(f/g)' = (f'·g − f·g') / g²</div>
+                    <p>Valid wherever g(x) ≠ 0. A common mnemonic: "low d-high minus high d-low, over the square of
+                        what's below."</p>
+                </div>
+                <div class="rule-card" id="chain-rule">
+                    <strong>Chain Rule</strong>
+                    <div class="formula">(f∘g)' = f'(g(x)) · g'(x)</div>
+                    <p>Differentiates compositions: "derivative of the outer function evaluated at the inner, times
+                        derivative of the inner."</p>
+                </div>
+                <div class="rule-card" id="const-sumdiff">
+                    <strong>Constant & Sum/Difference</strong>
+                    <div class="formula">d/dx [c] = 0 &nbsp;&nbsp; (c constant)</div>
+                    <div class="formula" style="margin-top:4px;">(f ± g)' = f' ± g'</div>
+                    <p>Constants vanish; the derivative of a sum is the sum of derivatives.</p>
+                </div>
+                <div class="rule-card" style="flex: 1 1 100%; background: #f0f0f0;">
+                    <strong>Combining rules</strong>
+                    <p>Most functions require a combination: e.g., d/dx [ sin(2x) ] = cos(2x)·2 (chain rule); d/dx [
+                        x²·eˣ ] = 2x·eˣ + x²·eˣ (product rule).</p>
+                </div>
+            </div>
+
+            <div class="elem-funcs" id="elementary">
+                <span class="section-head">Derivatives of elementary functions (extended table)</span>
+                <p>These standard derivatives, together with the rules above, enable differentiation of nearly any
+                    elementary function — algebraic, exponential, logarithmic, trigonometric, inverse trigonometric, and
+                    hyperbolic.</p>
+                <table>
+                    <tr>
+                        <td>d/dx [ xⁿ ] (any real n)</td>
+                        <td>= n·xⁿ⁻¹</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ eˣ ]</td>
+                        <td>= eˣ</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ aˣ ] (a > 0, a ≠ 1)</td>
+                        <td>= aˣ ln a</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ ln x ]</td>
+                        <td>= 1/x (x > 0)</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ logₐ x ]</td>
+                        <td>= 1/(x ln a)</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ sin x ]</td>
+                        <td>= cos x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ cos x ]</td>
+                        <td>= − sin x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ tan x ]</td>
+                        <td>= sec² x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ cot x ]</td>
+                        <td>= − csc² x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ sec x ]</td>
+                        <td>= sec x tan x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ csc x ]</td>
+                        <td>= − csc x cot x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ arcsin x ]</td>
+                        <td>= 1/√(1 − x²) (|x| < 1)</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ arccos x ]</td>
+                        <td>= −1/√(1 − x²)</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ arctan x ]</td>
+                        <td>= 1/(1 + x²)</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ arccot x ]</td>
+                        <td>= −1/(1 + x²)</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ arcsec x ]</td>
+                        <td>= 1/(|x|√(x² − 1)) (|x| > 1)</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ arccsc x ]</td>
+                        <td>= −1/(|x|√(x² − 1))</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ sinh x ]</td>
+                        <td>= cosh x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ cosh x ]</td>
+                        <td>= sinh x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ tanh x ]</td>
+                        <td>= sech² x</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ arsinh x ]</td>
+                        <td>= 1/√(x² + 1)</td>
+                    </tr>
+                    <tr>
+                        <td>d/dx [ artanh x ]</td>
+                        <td>= 1/(1 − x²) (|x| < 1)</td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div class="data-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tangent_to_a_curve.svg/500px-Tangent_to_a_curve.svg.png"
-                alt="Derivatives">
+
+            <img src="../../../../../assets/img/Tangent_to_a_curve.svg.png"
+                alt="Graph showing a red tangent line touching a curve at point x₀">
+
+            <div class="image-caption">
+                Tangent line (red) touching a curve at x₀. The slope of the tangent equals the derivative of the
+                function.
+                Source: Wikimedia Commons.
+            </div>
+
+            <img src="../../../../../assets/img/Tangent_function_animation.gif"
+                alt="Animation showing a tangent line moving along a curve to illustrate changing derivatives">
+
+            <div class="image-caption">
+                Animation showing the tangent line at different points on a curve. The slope of each tangent represents
+                the derivative of the function.
+                Source: Wikimedia Commons.
+            </div>
+
         </div>
     </div>
-    
+
     <footer>
         <div class="footer-content">
             <h3>References</h3>
@@ -57,31 +217,17 @@
                 <li>
                     <span class="ref-number">[1]</span>
                     <a href="https://en.wikipedia.org/wiki/Derivative" target="_blank">Wikipedia: Derivative</a>
-                    <span class="ref-source">- Wikimedia Foundation</span>
-                </li>
-                <li>
-                    <span class="ref-number">[2]</span>
-                    <a href="https://mathworld.wolfram.com/Derivative.html" target="_blank">Wolfram MathWorld: Derivative</a>
-                    <span class="ref-source">- Wolfram Research</span>
-                </li>
-                <li>
-                    <span class="ref-number">[3]</span>
-                    <a href="https://www.khanacademy.org/math/differential-calculus" target="_blank">Khan Academy: Differential Calculus</a>
-                    <span class="ref-source">- Khan Academy</span>
-                </li>
-                <li>
-                    <span class="ref-number">[4]</span>
-                    <span class="ref-title">Stewart, James. "Calculus: Early Transcendentals"</span>
-                    <span class="ref-source">- Cengage Learning, 8th Edition</span>
-                </li>
-                <li>
-                    <span class="ref-number">[5]</span>
-                    <a href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/" target="_blank">MIT OpenCourseWare: Single Variable Calculus</a>
-                    <span class="ref-source">- Massachusetts Institute of Technology</span>
+                    <span class="ref-source"> – Wikimedia Foundation. Comprehensive overview, historical notes, and
+                        formal definitions.</span>
                 </li>
             </ul>
             <div class="footer-bottom">
-                <p>© 2024 NXpedia. All rights reserved. Content available under <a href="#">Creative Commons</a> unless otherwise noted.</p>
+                <p>© 2026 NXpedia. Text available under the
+                    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons
+                        Attribution-ShareAlike
+                        4.0 License</a>.
+                    Images sourced from Wikimedia Commons (public domain or Creative Commons licensed).
+                </p>
             </div>
         </div>
     </footer>

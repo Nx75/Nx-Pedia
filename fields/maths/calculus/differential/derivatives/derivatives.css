@@ -11,16 +11,20 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    max-width: 1600px;
+    margin: 0 auto; /* Centers the content on very large screens */
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 65px;
-    padding: 0 2rem;
+    min-height: 65px;
+    padding: 0.5rem 1.5rem;
     border-bottom: 2px solid black;
     flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .logo {
@@ -32,27 +36,32 @@ header {
     text-decoration: none;
     color: black;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
     letter-spacing: -0.01em;
+    white-space: nowrap;
 }
 
 nav {
     flex: 1;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
+    min-width: 200px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 3rem;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 nav a {
     text-decoration: none;
     color: black;
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -61,20 +70,21 @@ nav a:hover {
 }
 
 .page-heading {
-    padding: 1.5rem 2rem 0.5rem;
+    padding: 1.5rem 1.5rem 0.5rem;
     border-bottom: 2px solid black;
 }
 
 .page-heading h1 {
     font-family: 'Cormorant Garamond', 'Times New Roman', Times, Baskerville, Georgia, serif;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .page-heading p {
     color: #4a4a4a;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
     margin-top: 0.25rem;
 }
 
@@ -82,22 +92,24 @@ nav a:hover {
     display: flex;
     flex: 1;
     border-bottom: 2px solid black;
+    flex-wrap: wrap;
 }
 
 /* Sidebar styles */
 .sidebar {
-    width: 200px;
+    width: 240px;
     border-right: 2px solid black;
     padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     background-color: #fafafa;
+    flex-shrink: 0;
 }
 
 .sidebar h2 {
     font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
     border-bottom: 1px solid #ddd;
@@ -109,7 +121,8 @@ nav a:hover {
     color: black;
     padding: 0.5rem 0;
     font-size: 0.95rem;
-    transition: padding-left 0.2s ease;
+    transition: all 0.2s ease;
+    border-bottom: 1px dotted #e0e0e0;
 }
 
 .sidebar a:hover {
@@ -125,12 +138,13 @@ nav a:hover {
     flex: 1;
     line-height: 1.6;
     color: #333;
+    min-width: 280px; /* Prevents text from getting too squeezed */
 }
 
 .text-container h2 {
     font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
 }
@@ -142,22 +156,126 @@ nav a:hover {
 .data-container {
     padding: 1.5rem;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    width: 300px;
+    width: 320px;
+    align-self: start;
+    flex-shrink: 0;
 }
 
 .data-container img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #eee;
+    border: 1px solid #bbb;
+    background: white;
+}
+
+.image-caption {
+    font-size: 0.75rem;
+    color: #555;
+    margin-top: 0.4rem;
+    text-align: center;
+    width: 100%;
+    border-top: 1px dotted #aaa;
+    padding-top: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.extra-images {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.extra-images img {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: auto;
+}
+
+/* Rule grid improvements */
+.rule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin: 1.8rem 0 1.2rem;
+}
+
+.rule-card {
+    background: #f9f9f9;
+    border: 1px solid #e2e2e2;
+    padding: 1rem 1.2rem;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    height: 100%; /* Makes cards equal height */
+    display: flex;
+    flex-direction: column;
+}
+
+.rule-card strong {
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.65rem;
+}
+
+.rule-card .formula {
+    font-family: 'Courier New', monospace;
+    background: #ffffff;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin: 0.5rem 0 0.25rem;
+    font-size: 0.9rem;
+    align-self: flex-start;
+}
+
+/* Element functions table improvements */
+.elem-funcs {
+    background: #f6f6f6;
+    padding: 1.2rem 1.5rem;
+    border-left: 4px solid #2c3e50;
+    margin: 2rem 0 1rem;
+    font-size: 0.95rem;
+    overflow-x: auto; /* Allows table to scroll on small screens */
+}
+
+.elem-funcs .section-head {
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.elem-funcs table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0;
+    min-width: 300px; /* Ensures table is readable */
+}
+
+.elem-funcs td {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.elem-funcs td:first-child {
+    font-family: 'Courier New', monospace;
+    width: 48%;
 }
 
 /* Footer styles */
 footer {
     border-top: 2px solid black;
     background-color: #fafafa;
-    padding: 2rem 2rem 1rem;
+    padding: 2rem 1.5rem 1rem;
 }
 
 .footer-content {
@@ -168,7 +286,7 @@ footer {
 .footer-content h3 {
     font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
     border-bottom: 1px solid #ddd;
@@ -185,8 +303,10 @@ footer {
     align-items: baseline;
     padding: 0.5rem 0;
     border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
+    font-size: clamp(0.85rem, 2vw, 0.9rem);
     line-height: 1.5;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .references-list li:last-child {
@@ -198,12 +318,14 @@ footer {
     color: #666;
     min-width: 40px;
     font-size: 0.85rem;
+    flex-shrink: 0;
 }
 
 .references-list a {
     color: #0066cc;
     text-decoration: none;
     margin-right: 0.5rem;
+    word-break: break-word; /* Prevents long URLs from breaking layout */
 }
 
 .references-list a:hover {
@@ -240,32 +362,153 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+    .main {
+        flex-wrap: wrap;
+    }
+    
+    .sidebar {
+        width: 200px;
+    }
+    
+    .data-container {
+        width: 280px;
+    }
+}
+
 @media (max-width: 768px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+    
+    .logo {
+        padding-right: 1rem;
+        border-right: 1px solid black;
+    }
+    
     .main {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 2px solid black;
+        padding: 1rem;
     }
-    
+
     .text-container {
         border-right: none;
         border-bottom: 2px solid black;
+        padding: 1rem;
+    }
+
+    .data-container {
+        width: 100%;
+        padding: 1rem;
+        align-items: center;
     }
     
-    .data-container {
+    .extra-images {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
         width: 100%;
     }
     
+    .rule-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem;
+    }
+    
+    .logo {
+        border-right: none;
+        border-bottom: 1px solid black;
+        padding-right: 0;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .page-heading {
+        padding: 1rem 0.5rem 0.5rem;
+    }
+    
+    .sidebar a {
+        text-align: center;
+    }
+    
+    .elem-funcs {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
     .references-list li {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
     }
     
     .ref-number {
-        min-width: 30px;
+        min-width: auto;
+    }
+    
+    footer {
+        padding: 1.5rem 1rem 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        border: none;
+        max-width: 100%;
+    }
+    
+    .sidebar,
+    .data-container,
+    footer {
+        display: none;
+    }
+    
+    .text-container {
+        border: none;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body {
+        border-color: black;
+    }
+    
+    .rule-card {
+        border: 2px solid black;
     }
 }
