@@ -12,7 +12,8 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1600px;
-    margin: 0 auto; /* Centers the content on very large screens */
+    margin: 0 auto;
+    /* Centers the content on very large screens */
 }
 
 header {
@@ -138,7 +139,7 @@ nav a:hover {
     flex: 1;
     line-height: 1.6;
     color: #333;
-    min-width: 280px; /* Prevents text from getting too squeezed */
+    min-width: 280px;
 }
 
 .text-container h2 {
@@ -195,7 +196,6 @@ nav a:hover {
     height: auto;
 }
 
-/* Rule grid improvements */
 .rule-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -210,7 +210,7 @@ nav a:hover {
     border-radius: 2px;
     font-size: 0.95rem;
     line-height: 1.5;
-    height: 100%; /* Makes cards equal height */
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -236,14 +236,14 @@ nav a:hover {
     align-self: flex-start;
 }
 
-/* Element functions table improvements */
+
 .elem-funcs {
     background: #f6f6f6;
     padding: 1.2rem 1.5rem;
     border-left: 4px solid #2c3e50;
     margin: 2rem 0 1rem;
     font-size: 0.95rem;
-    overflow-x: auto; /* Allows table to scroll on small screens */
+    overflow-x: auto;
 }
 
 .elem-funcs .section-head {
@@ -258,7 +258,7 @@ nav a:hover {
     width: 100%;
     border-collapse: collapse;
     margin: 0.5rem 0;
-    min-width: 300px; /* Ensures table is readable */
+    min-width: 300px;
 }
 
 .elem-funcs td {
@@ -325,7 +325,8 @@ footer {
     color: #0066cc;
     text-decoration: none;
     margin-right: 0.5rem;
-    word-break: break-word; /* Prevents long URLs from breaking layout */
+    word-break: break-word;
+    /* Prevents long URLs from breaking layout */
 }
 
 .references-list a:hover {
@@ -367,11 +368,11 @@ footer {
     .main {
         flex-wrap: wrap;
     }
-    
+
     .sidebar {
         width: 200px;
     }
-    
+
     .data-container {
         width: 280px;
     }
@@ -381,12 +382,12 @@ footer {
     header {
         padding: 0.5rem 1rem;
     }
-    
+
     .logo {
         padding-right: 1rem;
         border-right: 1px solid black;
     }
-    
+
     .main {
         flex-direction: column;
     }
@@ -409,14 +410,14 @@ footer {
         padding: 1rem;
         align-items: center;
     }
-    
+
     .extra-images {
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
     }
-    
+
     .rule-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
@@ -429,7 +430,7 @@ footer {
         height: auto;
         padding: 0.5rem;
     }
-    
+
     .logo {
         border-right: none;
         border-bottom: 1px solid black;
@@ -438,58 +439,57 @@ footer {
         width: 100%;
         text-align: center;
     }
-    
+
     nav {
         justify-content: center;
         width: 100%;
     }
-    
+
     nav ul {
         justify-content: center;
         gap: 1rem;
     }
-    
+
     .page-heading {
         padding: 1rem 0.5rem 0.5rem;
     }
-    
+
     .sidebar a {
         text-align: center;
     }
-    
+
     .elem-funcs {
         padding: 1rem;
         margin: 1rem 0;
     }
-    
+
     .references-list li {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.25rem;
     }
-    
+
     .ref-number {
         min-width: auto;
     }
-    
+
     footer {
         padding: 1.5rem 1rem 1rem;
     }
 }
 
-/* Print styles */
 @media print {
     body {
         border: none;
         max-width: 100%;
     }
-    
+
     .sidebar,
     .data-container,
     footer {
         display: none;
     }
-    
+
     .text-container {
         border: none;
     }
@@ -507,7 +507,7 @@ footer {
     body {
         border-color: black;
     }
-    
+
     .rule-card {
         border: 2px solid black;
     }
