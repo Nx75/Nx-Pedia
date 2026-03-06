@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     max-width: 1600px;
     margin: 0 auto;
-    /* Centers the content on very large screens */
 }
 
 header {
@@ -96,7 +95,6 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-/* Sidebar styles */
 .sidebar {
     width: 240px;
     border-right: 2px solid black;
@@ -198,15 +196,15 @@ nav a:hover {
 
 .rule-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.2rem;
-    margin: 1.8rem 0 1.2rem;
+    margin: 2rem 0 1.5rem;
 }
 
 .rule-card {
     background: #f9f9f9;
     border: 1px solid #e2e2e2;
-    padding: 1rem 1.2rem;
+    padding: 1.2rem;
     border-radius: 2px;
     font-size: 0.95rem;
     line-height: 1.5;
@@ -217,33 +215,39 @@ nav a:hover {
 
 .rule-card strong {
     font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 600;
     display: block;
     border-bottom: 1px solid #d0d0d0;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.65rem;
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.75rem;
 }
 
 .rule-card .formula {
     font-family: 'Courier New', monospace;
     background: #ffffff;
-    padding: 0.25rem 0.5rem;
+    padding: 0.4rem 0.6rem;
     border: 1px solid #ccc;
     display: inline-block;
-    margin: 0.5rem 0 0.25rem;
-    font-size: 0.9rem;
+    margin: 0.5rem 0 0.75rem;
+    font-size: 0.95rem;
     align-self: flex-start;
+    border-radius: 2px;
 }
 
+.highlight-card {
+    background: #edf2f7;
+    border-left: 4px solid #3182ce;
+}
 
 .elem-funcs {
-    background: #f6f6f6;
+    background: #f8f9fa;
     padding: 1.2rem 1.5rem;
     border-left: 4px solid #2c3e50;
-    margin: 2rem 0 1rem;
+    margin: 1.5rem 0;
     font-size: 0.95rem;
     overflow-x: auto;
+    border-radius: 0 2px 2px 0;
 }
 
 .elem-funcs .section-head {
@@ -251,27 +255,59 @@ nav a:hover {
     font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
     font-size: clamp(1.2rem, 3vw, 1.4rem);
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    color: #1a2b3c;
 }
 
 .elem-funcs table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
     min-width: 300px;
 }
 
 .elem-funcs td {
-    padding: 0.4rem 0;
+    padding: 0.5rem 0.25rem;
     border-bottom: 1px dashed #ccc;
 }
 
 .elem-funcs td:first-child {
     font-family: 'Courier New', monospace;
-    width: 48%;
+    width: 55%;
+    font-size: 0.9rem;
 }
 
-/* Footer styles */
+.elem-funcs td:last-child {
+    font-family: 'Courier New', monospace;
+    padding-left: 1rem;
+}
+
+.info-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f0f5fa;
+    border: 1px solid #b8d1e0;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.info-box-title {
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1e3a5f;
+}
+
+.info-box-example {
+    font-family: 'Courier New', monospace;
+    background: #ffffff;
+    padding: 0.3rem 0.5rem;
+    margin-top: 0.5rem;
+    border-left: 3px solid #2c3e50;
+    font-size: 0.9rem;
+}
+
 footer {
     border-top: 2px solid black;
     background-color: #fafafa;
@@ -326,7 +362,6 @@ footer {
     text-decoration: none;
     margin-right: 0.5rem;
     word-break: break-word;
-    /* Prevents long URLs from breaking layout */
 }
 
 .references-list a:hover {
@@ -493,16 +528,25 @@ footer {
     .text-container {
         border: none;
     }
+
+    .formula-block,
+    .rule-card .formula {
+        background: #ffffff;
+        border: 1px solid #000;
+    }
+
+    .elem-funcs {
+        background: #ffffff;
+        border-left: 2px solid #000;
+    }
 }
 
-/* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
     * {
         transition: none !important;
     }
 }
 
-/* High contrast mode support */
 @media (prefers-contrast: high) {
     body {
         border-color: black;
