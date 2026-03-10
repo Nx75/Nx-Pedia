@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit Differentiation - NXpedia</title>
+    <link rel="stylesheet" href="implicit.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../../../../index.html">NXpedia</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../../../../assets/list_box.html">Explore</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">Search</a></li>
+                <li><a href="https://github.com/Nx75/Nx-Pedia.git" target="_blank">Contribute</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">About</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page-heading">
+        <h1>Implicit Differentiation</h1>
+        <p>power rule · product rule · quotient rule · chain rule · constant rule · sum/difference rule · elementary functions</p>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <a href="#definition">Definition</a>
+            <a href="#formulation">Formulation</a>
+            <a href="#examples">Examples</a>
+            <a href="#references">References</a>
+        </div>
+        <div class="text-container">
+            <h2 id="definition">Definition of Implicit Differentiation</h2>
+            <p>In calculus, a method called implicit differentiation makes use of the chain rule to differentiate implicitly defined functions. It is a way of differentiating an equation that is not explicitly solved for one variable in terms of the other. Instead of solving for y in terms of x, we differentiate both sides of the equation with respect to x, treating y as a function of x, and then solve for dy/dx.</p>
+            
+            <p>An implicit function is a function that is defined implicitly by an equation involving two variables. In many cases, it is difficult or impossible to solve for one variable explicitly. For example, the equation x² + y² = 1 defines y implicitly as a function of x, but solving for y gives y = ±√(1 - x²), which is two separate functions. Implicit differentiation allows us to find the derivative without solving for y.</p>
+
+            <h2 id="formulation">Formulation</h2>
+            <p>Given an equation F(x, y) = 0, where y is a function of x, we can differentiate both sides with respect to x using the chain rule:</p>
+            
+            <div class="elem-funcs">
+                <span class="section-head">Implicit Differentiation Formula</span>
+                <div class="info-box">
+                    <div class="info-box-title">General Implicit Differentiation</div>
+                    <p>If F(x, y) = 0 defines y implicitly as a function of x, then:</p>
+                    <div class="info-box-example">dy/dx = - (∂F/∂x) / (∂F/∂y) &nbsp;&nbsp; provided ∂F/∂y ≠ 0</div>
+                    <p style="margin-top: 0.75rem;">Alternatively, differentiating directly:</p>
+                    <div class="info-box-example">d/dx[F(x, y(x))] = ∂F/∂x + ∂F/∂y · dy/dx = 0</div>
+                </div>
+            </div>
+            
+            <p>This formulation comes from the fact that when we differentiate F(x, y(x)) with respect to x, we apply the chain rule to the y terms because y is itself a function of x.</p>
+            
+            <div class="rule-grid">
+                <div class="rule-card">
+                    <strong>Chain Rule Application</strong>
+                    <p>When differentiating terms containing y, treat y as a function of x and multiply by dy/dx. For example, the derivative of y² is 2y·dy/dx.</p>
+                    <span class="formula">d/dx[yⁿ] = n·yⁿ⁻¹·dy/dx</span>
+                </div>
+                <div class="rule-card highlight-card">
+                    <strong>Product Rule with y</strong>
+                    <p>For products involving y and x, apply the product rule treating y as y(x). For example, d/dx[x·y] = y + x·dy/dx.</p>
+                    <span class="formula">d/dx[x·y] = y + x·dy/dx</span>
+                </div>
+                <div class="rule-card">
+                    <strong>Higher Derivatives</strong>
+                    <p>Implicit differentiation can be applied repeatedly to find second derivatives and beyond, using the quotient rule and chain rule as needed.</p>
+                </div>
+            </div>
+
+            <h2 id="examples">Examples</h2>
+            
+            <div class="elem-funcs">
+                <span class="section-head">Example 1: Circle Equation</span>
+                <p>Find dy/dx for x² + y² = 1</p>
+                <table>
+                    <tr><td>Step 1: Differentiate both sides:</td><td>d/dx(x²) + d/dx(y²) = d/dx(1)</td></tr>
+                    <tr><td>Step 2: Apply derivative rules:</td><td>2x + 2y·dy/dx = 0</td></tr>
+                    <tr><td>Step 3: Solve for dy/dx:</td><td>2y·dy/dx = -2x → dy/dx = -x/y</td></tr>
+                </table>
+                <div class="info-box-example" style="margin-top: 0.5rem;">Result: dy/dx = -x/y (for y ≠ 0)</div>
+            </div>
+            
+            <div class="elem-funcs">
+                <span class="section-head">Example 2: Ellipse Equation</span>
+                <p>Find dy/dx for x²/16 + y²/9 = 1</p>
+                <table>
+                    <tr><td>Step 1: Differentiate:</td><td>(2x/16) + (2y/9)·dy/dx = 0</td></tr>
+                    <tr><td>Step 2: Simplify:</td><td>x/8 + (2y/9)·dy/dx = 0</td></tr>
+                    <tr><td>Step 3: Solve:</td><td>(2y/9)·dy/dx = -x/8 → dy/dx = -(9x)/(16y)</td></tr>
+                </table>
+                <div class="info-box-example" style="margin-top: 0.5rem;">Result: dy/dx = -(9x)/(16y)</div>
+            </div>
+            
+            <div class="elem-funcs">
+                <span class="section-head">Example 3: Folium of Descartes</span>
+                <p>Find dy/dx for x³ + y³ = 3xy</p>
+                <table>
+                    <tr><td>Step 1: Differentiate:</td><td>3x² + 3y²·dy/dx = 3y + 3x·dy/dx</td></tr>
+                    <tr><td>Step 2: Collect dy/dx terms:</td><td>3y²·dy/dx - 3x·dy/dx = 3y - 3x²</td></tr>
+                    <tr><td>Step 3: Factor dy/dx:</td><td>dy/dx(3y² - 3x) = 3y - 3x²</td></tr>
+                    <tr><td>Step 4: Solve:</td><td>dy/dx = (3y - 3x²)/(3y² - 3x) = (y - x²)/(y² - x)</td></tr>
+                </table>
+            </div>
+            
+            <div class="elem-funcs">
+                <span class="section-head">Example 4: Tangent Line</span>
+                <p>Find the tangent line to x² + y² = 25 at point (3, 4)</p>
+                <table>
+                    <tr><td>Step 1: Find dy/dx:</td><td>2x + 2y·dy/dx = 0 → dy/dx = -x/y</td></tr>
+                    <tr><td>Step 2: Evaluate at (3,4):</td><td>m = -3/4</td></tr>
+                    <tr><td>Step 3: Point-slope form:</td><td>y - 4 = (-3/4)(x - 3)</td></tr>
+                    <tr><td>Step 4: Simplify:</td><td>y = (-3/4)x + 25/4</td></tr>
+                </table>
+            </div>
+            
+            <div class="info-box">
+                <div class="info-box-title">Second Derivative Example</div>
+                <p>For the circle x² + y² = 1, find d²y/dx²:</p>
+                <p>From dy/dx = -x/y, differentiate with quotient rule:</p>
+                <div class="info-box-example">d²y/dx² = -[y(1) - x(dy/dx)]/y² = -[y - x(-x/y)]/y² = -(y + x²/y)/y² = -(y² + x²)/y³ = -1/y³</div>
+                <p style="margin-top: 0.5rem;">Since x² + y² = 1, the second derivative simplifies to d²y/dx² = -1/y³</p>
+            </div>
+            
+            <h2 id="applications">Applications</h2>
+            <p>Implicit differentiation is widely used in various fields:</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li><strong>Related rates:</strong> Finding rates of change of related variables</li>
+                <li><strong>Economics:</strong> Marginal rate of substitution in indifference curves</li>
+                <li><strong>Physics:</strong> Thermodynamic equations of state</li>
+                <li><strong>Geometry:</strong> Slopes of tangent lines to curves not easily solved for y</li>
+                <li><strong>Engineering:</strong> Stress-strain relationships in materials</li>
+            </ul>
+            
+            <p>The method is particularly useful when dealing with equations where solving explicitly for y would be cumbersome or impossible, such as transcendental equations involving both x and y.</p>
+            
+            <div class="elem-funcs">
+                <span class="section-head">Elementary Functions and Their Implicit Derivatives</span>
+                <table>
+                    <tr><td>y = uⁿ (u depends on x)</td><td>dy/dx = n·uⁿ⁻¹·du/dx</td></tr>
+                    <tr><td>y = sin(u)</td><td>dy/dx = cos(u)·du/dx</td></tr>
+                    <tr><td>y = cos(u)</td><td>dy/dx = -sin(u)·du/dx</td></tr>
+                    <tr><td>y = eᵘ</td><td>dy/dx = eᵘ·du/dx</td></tr>
+                    <tr><td>y = ln(u)</td><td>dy/dx = (1/u)·du/dx</td></tr>
+                    <tr><td>y = aᵘ</td><td>dy/dx = aᵘ·ln(a)·du/dx</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>References</h3>
+        <ul class="references-list">
+            <li>
+                <span class="ref-number">[1]</span>
+                <a href="https://en.wikipedia.org/wiki/Implicit_function" target="_blank">Wikipedia: Implicit function</a>
+                <span class="ref-source">Comprehensive article on implicit functions and their properties in mathematics</span>
+            </li>
+            <li>
+                <span class="ref-number">[2]</span>
+                <a href="https://en.wikipedia.org/wiki/Implicit_function_theorem" target="_blank">Wikipedia: Implicit function theorem</a>
+                <span class="ref-source">The theoretical foundation for implicit differentiation, providing conditions under which an implicit function exists</span>
+            </li>
+            <li>
+                <span class="ref-number">[3]</span>
+                <a href="https://en.wikipedia.org/wiki/Differential_calculus" target="_blank">Wikipedia: Differential calculus</a>
+                <span class="ref-source">Overview of differential calculus including differentiation rules and applications</span>
+            </li>
+            <li>
+                <span class="ref-number">[4]</span>
+                <span class="ref-title">Stewart, James (2015). "Implicit Differentiation". Calculus: Early Transcendentals (8th ed.). Cengage Learning.</span>
+                <span class="ref-source">Standard calculus textbook with detailed examples of implicit differentiation</span>
+            </li>
+        </ul>
+        <div class="footer-bottom">
+            <p>Content derived from Wikipedia articles on <a href="https://en.wikipedia.org/wiki/Implicit_differentiation" target="_blank">Implicit differentiation</a> and related topics. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p>
+            <p style="margin-top: 0.5rem;">NXpedia © 2025 · Mathematics reference</p>
+        </div>
+    </footer>
+</body>
+
+</html>
