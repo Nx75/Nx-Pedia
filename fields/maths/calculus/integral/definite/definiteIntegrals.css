@@ -144,12 +144,88 @@ nav a:hover {
     font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: clamp(1.5rem, 4vw, 1.8rem);
-    margin-bottom: 1rem;
+    margin: 2rem 0 1rem;
     letter-spacing: -0.02em;
+}
+
+.text-container h2:first-of-type {
+    margin-top: 0;
 }
 
 .text-container p {
     margin-bottom: 1rem;
+}
+
+.formula-block {
+    font-family: 'Courier New', monospace;
+    background-color: #f8f9fa;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #1e3a5f;
+}
+
+.example-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-left: 4px solid #4a4a4a;
+}
+
+.example-box strong {
+    color: #1e3a5f;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.derivative-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 400px;
+}
+
+.derivative-table th {
+    background-color: #1e3a5f;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    border: 1px solid #1e3a5f;
+}
+
+.derivative-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    font-family: 'Courier New', monospace;
+}
+
+.derivative-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.step-list {
+    margin: 1.5rem 0 1.5rem 2rem;
+    padding-left: 0;
+}
+
+.step-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
 }
 
 .data-container {
@@ -192,119 +268,6 @@ nav a:hover {
     border: 1px solid #ccc;
     width: 100%;
     height: auto;
-}
-
-.rule-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.2rem;
-    margin: 2rem 0 1.5rem;
-}
-
-.rule-card {
-    background: #f9f9f9;
-    border: 1px solid #e2e2e2;
-    padding: 1.2rem;
-    border-radius: 2px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.rule-card strong {
-    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    display: block;
-    border-bottom: 1px solid #d0d0d0;
-    padding-bottom: 0.35rem;
-    margin-bottom: 0.75rem;
-}
-
-.rule-card .formula {
-    font-family: 'Courier New', monospace;
-    background: #ffffff;
-    padding: 0.4rem 0.6rem;
-    border: 1px solid #ccc;
-    display: inline-block;
-    margin: 0.5rem 0 0.75rem;
-    font-size: 0.95rem;
-    align-self: flex-start;
-    border-radius: 2px;
-}
-
-.highlight-card {
-    background: #edf2f7;
-    border-left: 4px solid #3182ce;
-}
-
-.elem-funcs {
-    background: #f8f9fa;
-    padding: 1.2rem 1.5rem;
-    margin: 1.5rem 0;
-    font-size: 0.95rem;
-    overflow-x: auto;
-    border-radius: 0 2px 2px 0;
-}
-
-.elem-funcs .section-head {
-    font-weight: 600;
-    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
-    display: block;
-    margin-bottom: 1rem;
-    color: #1a2b3c;
-}
-
-.elem-funcs table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0.25rem 0;
-    min-width: 300px;
-}
-
-.elem-funcs td {
-    padding: 0.5rem 0.25rem;
-    border-bottom: 1px dashed #ccc;
-}
-
-.elem-funcs td:first-child {
-    font-family: 'Courier New', monospace;
-    width: 55%;
-    font-size: 0.9rem;
-}
-
-.elem-funcs td:last-child {
-    font-family: 'Courier New', monospace;
-    padding-left: 1rem;
-}
-
-.info-box {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: #f0f5fa;
-    border: 1px solid #b8d1e0;
-    border-radius: 2px;
-    width: 100%;
-}
-
-.info-box-title {
-    font-weight: 600;
-    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #1e3a5f;
-}
-
-.info-box-example {
-    font-family: 'Courier New', monospace;
-    background: #ffffff;
-    padding: 0.3rem 0.5rem;
-    margin-top: 0.5rem;
-    border-left: 3px solid #2c3e50;
-    font-size: 0.9rem;
 }
 
 footer {
@@ -368,12 +331,6 @@ footer {
     text-underline-offset: 2px;
 }
 
-.ref-title {
-    color: #333;
-    margin-right: 0.5rem;
-    font-style: italic;
-}
-
 .ref-source {
     color: #666;
     font-size: 0.85rem;
@@ -397,7 +354,6 @@ footer {
     text-decoration: underline;
 }
 
-/* Responsive breakpoints */
 @media (max-width: 1024px) {
     .main {
         flex-wrap: wrap;
@@ -409,6 +365,11 @@ footer {
 
     .data-container {
         width: 280px;
+    }
+    
+    .formula-block {
+        white-space: normal;
+        word-break: break-word;
     }
 }
 
@@ -451,11 +412,6 @@ footer {
         margin-right: auto;
         width: 100%;
     }
-
-    .rule-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -492,11 +448,6 @@ footer {
         text-align: center;
     }
 
-    .elem-funcs {
-        padding: 1rem;
-        margin: 1rem 0;
-    }
-
     .references-list li {
         flex-direction: column;
         align-items: flex-start;
@@ -527,16 +478,20 @@ footer {
     .text-container {
         border: none;
     }
-
-    .formula-block,
-    .rule-card .formula {
+    
+    .formula-block {
         background: #ffffff;
         border: 1px solid #000;
     }
-
-    .elem-funcs {
+    
+    .example-box {
         background: #ffffff;
-        border-left: 2px solid #000;
+        border: 1px solid #000;
+    }
+    
+    .derivative-table th {
+        background-color: #eee;
+        color: black;
     }
 }
 
@@ -549,9 +504,5 @@ footer {
 @media (prefers-contrast: high) {
     body {
         border-color: black;
-    }
-
-    .rule-card {
-        border: 2px solid black;
     }
 }
