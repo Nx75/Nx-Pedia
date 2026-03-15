@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definite Integrals · NXpedia</title>
+    <link rel="stylesheet" href="definiteIntegrals.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../../../../../index.html">NXpedia</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../../../../assets/list_box.html">Explore</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">Search</a></li>
+                <li><a href="https://github.com/Nx75/Nx-Pedia.git" target="_blank">Contribute</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">About</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-heading">
+        <h1>INTEGRAL · DEFINITE · Integrals & Area</h1>
+        <p>Riemann sums • Fundamental Theorem • Net area • Average value • Properties of definite integrals • Comparison theorem</p>
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <a href="#riemann-sums">Riemann Sums</a>
+            <a href="#fundamental-theorem">Fundamental Theorem</a>
+            <a href="#net-area">Net Area</a>
+            <a href="#average-value">Average Value</a>
+            <a href="#properties">Properties</a>
+            <a href="#comparison">Comparison Theorem</a>
+            <a href="#references">References</a>
+        </div>
+
+        <div class="text-container">
+            <h2 id="riemann-sums">Riemann Sums</h2>
+            <p>A Riemann sum is a method for approximating the total area underneath a curve on a graph, otherwise known as an integral. It was introduced by the German mathematician Bernhard Riemann in 1854 as a rigorous formulation of the integral concept. The idea is to partition the interval of integration into smaller subintervals, create rectangles whose heights are determined by the function at specific points within each subinterval, and then sum the areas of these rectangles.</p>
+            
+            <div class="formula-block">∫<sub>a</sub><sup>b</sup> f(x) dx = lim<sub>n→∞</sub> ∑<sub>i=1</sub><sup>n</sup> f(x<sub>i</sub>*) Δx</div>
+            
+            <p>For a partition of [a,b] into n subintervals of equal width Δx = (b-a)/n, with sample points x<sub>i</sub>* in each subinterval [x<sub>i-1</sub>, x<sub>i</sub>], the Riemann sum is:</p>
+            
+            <div class="formula-block">S = ∑<sub>i=1</sub><sup>n</sup> f(x<sub>i</sub>*) Δx</div>
+            
+            <p><strong>Types of Riemann sums:</strong></p>
+            <ul class="step-list">
+                <li><strong>Left Riemann sum:</strong> Uses left endpoints (x<sub>i-1</sub>) as sample points</li>
+                <li><strong>Right Riemann sum:</strong> Uses right endpoints (x<sub>i</sub>) as sample points</li>
+                <li><strong>Midpoint Riemann sum:</strong> Uses midpoints of each subinterval</li>
+                <li><strong>Upper Riemann sum:</strong> Uses supremum (maximum) of f on each subinterval</li>
+                <li><strong>Lower Riemann sum:</strong> Uses infimum (minimum) of f on each subinterval</li>
+            </ul>
+            
+            <div class="example-box">
+                <strong>Example:</strong> Approximate ∫<sub>0</sub><sup>2</sup> x² dx using right Riemann sum with n=4.<br>
+                Δx = (2-0)/4 = 0.5<br>
+                Right endpoints: 0.5, 1.0, 1.5, 2.0<br>
+                S = 0.5[f(0.5) + f(1.0) + f(1.5) + f(2.0)]<br>
+                S = 0.5[0.25 + 1 + 2.25 + 4] = 0.5(7.5) = 3.75<br>
+                Actual value: 8/3 ≈ 2.667, so this overestimates because x² is increasing.
+            </div>
+
+            <h2 id="fundamental-theorem">Fundamental Theorem of Calculus</h2>
+            <p>The Fundamental Theorem of Calculus (FTC) establishes the connection between differentiation and integration, two of the main concepts in calculus. It has two parts, often referred to as the First Fundamental Theorem and the Second Fundamental Theorem.</p>
+            
+            <p><strong>Part 1 (FTC1):</strong> If f is continuous on [a,b] and F is defined by:</p>
+            <div class="formula-block">F(x) = ∫<sub>a</sub><sup>x</sup> f(t) dt</div>
+            <p>then F is continuous on [a,b], differentiable on (a,b), and F'(x) = f(x) for all x in (a,b). In other words, the function F is an antiderivative of f.</p>
+            
+            <p><strong>Part 2 (FTC2):</strong> If f is continuous on [a,b] and F is any antiderivative of f (i.e., F' = f), then:</p>
+            <div class="formula-block">∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) − F(a)</div>
+            
+            <p>The theorem was independently developed by Isaac Newton and Gottfried Wilhelm Leibniz in the late 17th century. It transforms the problem of computing areas into finding antiderivatives, making integration computationally feasible.</p>
+            
+            <div class="example-box">
+                <strong>Example:</strong> Evaluate ∫<sub>1</sub><sup>3</sup> (2x + 1) dx using FTC2.<br>
+                Find antiderivative: F(x) = x² + x + C<br>
+                ∫<sub>1</sub><sup>3</sup> (2x + 1) dx = F(3) − F(1) = (9 + 3) − (1 + 1) = 12 − 2 = 10
+            </div>
+
+            <h2 id="net-area">Net Area vs. Total Area</h2>
+            <p>The definite integral ∫<sub>a</sub><sup>b</sup> f(x) dx gives the <strong>net area</strong> between the curve and the x-axis — area above the axis is counted as positive, area below as negative. This is different from <strong>total area</strong>, which counts all area as positive.</p>
+            
+            <div class="formula-block">Net Area = ∫<sub>a</sub><sup>b</sup> f(x) dx</div>
+            <div class="formula-block">Total Area = ∫<sub>a</sub><sup>b</sup> |f(x)| dx</div>
+            
+            <div class="example-box">
+                <strong>Example:</strong> For f(x) = sin x on [0, 2π]:<br>
+                Net area = ∫<sub>0</sub><sup>2π</sup> sin x dx = 0 (positive and negative areas cancel)<br>
+                Total area = ∫<sub>0</sub><sup>2π</sup> |sin x| dx = 4 (area of two humps: 2 + 2 = 4)
+            </div>
+            
+            <p>To find total area when a function crosses the x-axis:</p>
+            <ol class="step-list">
+                <li>Find all x-intercepts (zeros) of f(x) in [a,b]</li>
+                <li>Split the integral at these points</li>
+                <li>Integrate |f(x)| = f(x) where f(x) ≥ 0, and −f(x) where f(x) ≤ 0</li>
+                <li>Sum the absolute values</li>
+            </ol>
+
+            <h2 id="average-value">Average Value of a Function</h2>
+            <p>The average value of a function f(x) over an interval [a,b] is defined as the height of a rectangle with base [a,b] that has the same area as the region under the curve. This extends the concept of averaging discrete values to continuous functions.</p>
+            
+            <div class="formula-block">f<sub>avg</sub> = <span style="font-size: 1.2rem;">1</span>⁄<sub>(b-a)</sub> ∫<sub>a</sub><sup>b</sup> f(x) dx</div>
+            
+            <p>The Mean Value Theorem for Integrals states that if f is continuous on [a,b], then there exists at least one number c in [a,b] such that:</p>
+            
+            <div class="formula-block">f(c) = f<sub>avg</sub> = <span style="font-size: 1.2rem;">1</span>⁄<sub>(b-a)</sub> ∫<sub>a</sub><sup>b</sup> f(x) dx</div>
+            
+            <p>Geometrically, this means there is a rectangle with base [a,b] and height f(c) that has exactly the same area as the region under the curve.</p>
+            
+            <div class="example-box">
+                <strong>Example:</strong> Find the average value of f(x) = x² on [0,2] and find c where f(c) equals this average.<br>
+                f<sub>avg</sub> = 1/(2-0) ∫<sub>0</sub><sup>2</sup> x² dx = (1/2)[x³/3]<sub>0</sub><sup>2</sup> = (1/2)(8/3) = 4/3 ≈ 1.333<br>
+                Find c: f(c) = c² = 4/3 → c = √(4/3) = 2/√3 ≈ 1.155, which lies in [0,2]
+            </div>
+
+            <h2 id="properties">Properties of Definite Integrals</h2>
+            <p>Definite integrals satisfy several important properties that simplify calculations and theoretical manipulations. These properties follow directly from the definition of the integral as a limit of Riemann sums.</p>
+            
+            <div class="table-wrapper">
+                <table class="derivative-table">
+                    <tr><th>Property</th><th>Formula</th></tr>
+                    <tr><td>Zero width</td><td>∫<sub>a</sub><sup>a</sup> f(x) dx = 0</td></tr>
+                    <tr><td>Reverse limits</td><td>∫<sub>a</sub><sup>b</sup> f(x) dx = −∫<sub>b</sub><sup>a</sup> f(x) dx</td></tr>
+                    <tr><td>Constant multiple</td><td>∫<sub>a</sub><sup>b</sup> k·f(x) dx = k ∫<sub>a</sub><sup>b</sup> f(x) dx</td></tr>
+                    <tr><td>Sum/Difference</td><td>∫<sub>a</sub><sup>b</sup> [f(x) ± g(x)] dx = ∫<sub>a</sub><sup>b</sup> f(x) dx ± ∫<sub>a</sub><sup>b</sup> g(x) dx</td></tr>
+                    <tr><td>Additivity of intervals</td><td>∫<sub>a</sub><sup>b</sup> f(x) dx + ∫<sub>b</sub><sup>c</sup> f(x) dx = ∫<sub>a</sub><sup>c</sup> f(x) dx</td></tr>
+                    <tr><td>Inequality (monotonicity)</td><td>If f(x) ≤ g(x) on [a,b], then ∫<sub>a</sub><sup>b</sup> f(x) dx ≤ ∫<sub>a</sub><sup>b</sup> g(x) dx</td></tr>
+                    <tr><td>Bounds</td><td>If m ≤ f(x) ≤ M on [a,b], then m(b-a) ≤ ∫<sub>a</sub><sup>b</sup> f(x) dx ≤ M(b-a)</td></tr>
+                    <tr><td>Even functions</td><td>If f is even, ∫<sub>-a</sub><sup>a</sup> f(x) dx = 2∫<sub>0</sub><sup>a</sup> f(x) dx</td></tr>
+                    <tr><td>Odd functions</td><td>If f is odd, ∫<sub>-a</sub><sup>a</sup> f(x) dx = 0</td></tr>
+                    <tr><td>Periodic functions</td><td>If f has period T, ∫<sub>a</sub><sup>a+T</sup> f(x) dx = ∫<sub>0</sub><sup>T</sup> f(x) dx</td></tr>
+                </table>
+            </div>
+            
+            <div class="example-box">
+                <strong>Linearity in action:</strong> ∫<sub>0</sub><sup>1</sup> (3x² + 2x) dx = 3∫<sub>0</sub><sup>1</sup> x² dx + 2∫<sub>0</sub><sup>1</sup> x dx = 3(1/3) + 2(1/2) = 1 + 1 = 2
+            </div>
+
+            <h2 id="comparison">Comparison Theorem</h2>
+            <p>The Comparison Theorem for integrals provides a way to bound an integral by comparing the integrand to simpler functions. It's particularly useful when the exact value is difficult to compute but bounds are sufficient, and for establishing convergence of improper integrals.</p>
+            
+            <p><strong>Basic Comparison:</strong> If f(x) ≤ g(x) for all x in [a,b], then:</p>
+            <div class="formula-block">∫<sub>a</sub><sup>b</sup> f(x) dx ≤ ∫<sub>a</sub><sup>b</sup> g(x) dx</div>
+            
+            <p><strong>Absolute Value Comparison:</strong> Since −|f(x)| ≤ f(x) ≤ |f(x)|, we have:</p>
+            <div class="formula-block">|∫<sub>a</sub><sup>b</sup> f(x) dx| ≤ ∫<sub>a</sub><sup>b</sup> |f(x)| dx</div>
+            
+            <p><strong>Bounding Theorem:</strong> If m ≤ f(x) ≤ M on [a,b], then:</p>
+            <div class="formula-block">m(b−a) ≤ ∫<sub>a</sub><sup>b</sup> f(x) dx ≤ M(b−a)</div>
+            
+            <p><strong>For improper integrals:</strong> If 0 ≤ f(x) ≤ g(x) on [a,∞) and ∫<sub>a</sub><sup>∞</sup> g(x) dx converges, then ∫<sub>a</sub><sup>∞</sup> f(x) dx converges. Conversely, if ∫<sub>a</sub><sup>∞</sup> f(x) dx diverges, then ∫<sub>a</sub><sup>∞</sup> g(x) dx diverges.</p>
+            
+            <div class="example-box">
+                <strong>Example:</strong> Show that 1 ≤ ∫<sub>0</sub><sup>1</sup> √(1+x³) dx ≤ √2.<br>
+                On [0,1], x³ ranges from 0 to 1, so 1 ≤ 1+x³ ≤ 2<br>
+                Taking square roots: 1 ≤ √(1+x³) ≤ √2<br>
+                Integrating: 1·(1-0) ≤ ∫<sub>0</sub><sup>1</sup> √(1+x³) dx ≤ √2·(1-0)<br>
+                Therefore: 1 ≤ ∫<sub>0</sub><sup>1</sup> √(1+x³) dx ≤ √2 ≈ 1.414
+            </div>
+            
+            <div class="example-box">
+                <strong>Example - Improper integrals:</strong> Determine if ∫<sub>1</sub><sup>∞</sup> e<sup>-x²</sup> dx converges.<br>
+                For x ≥ 1, e<sup>-x²</sup> ≤ e<sup>-x</sup> (since x² ≥ x)<br>
+                ∫<sub>1</sub><sup>∞</sup> e<sup>-x</sup> dx = lim<sub>b→∞</sub> [−e<sup>-x</sup>]<sub>1</sub><sup>b</sup> = 0 + e<sup>-1</sup> = 1/e (converges)<br>
+                By comparison, since 0 ≤ e<sup>-x²</sup> ≤ e<sup>-x</sup> and ∫ e<sup>-x</sup> converges, ∫ e<sup>-x²</sup> also converges.
+            </div>
+        </div>
+
+        <div class="data-container">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 220'%3E%3Crect width='300' height='220' fill='%23f9f9f9'/%3E%3Ctext x='20' y='25' font-family='sans-serif' font-size='14' font-weight='bold'%3ERiemann Sum Approximation%3C/text%3E%3Cpath d='M40,180 L280,180' stroke='%23333' stroke-width='1.5'/%3E%3Cpath d='M50,20 L50,200' stroke='%23333' stroke-width='1.5'/%3E%3C!-- Curve f(x)=x²/15 --%3E%3Cpath d='M50,180 Q100,100 150,60 Q200,30 250,20' stroke='%23000000' stroke-width='2.5' fill='none' /%3E%3C!-- Riemann rectangles (4 rectangles) --%3E%3Crect x='50' y='180' width='50' height='-60' fill='%23336699' opacity='0.3' stroke='%23336699' stroke-width='1' /%3E%3Crect x='100' y='180' width='50' height='-100' fill='%23336699' opacity='0.3' stroke='%23336699' stroke-width='1' /%3E%3Crect x='150' y='180' width='50' height='-130' fill='%23336699' opacity='0.3' stroke='%23336699' stroke-width='1' /%3E%3Crect x='200' y='180' width='50' height='-150' fill='%23336699' opacity='0.3' stroke='%23336699' stroke-width='1' /%3E%3Ctext x='60' y='195' font-size='10'%3Ex₀%3C/text%3E%3Ctext x='110' y='195' font-size='10'%3Ex₁%3C/text%3E%3Ctext x='160' y='195' font-size='10'%3Ex₂%3C/text%3E%3Ctext x='210' y='195' font-size='10'%3Ex₃%3C/text%3E%3Ctext x='255' y='195' font-size='10'%3Ex₄%3C/text%3E%3C/svg%3E"
+                 alt="Riemann sum approximation with rectangles">
+            <div class="image-caption">Riemann sum approximation of area under a curve using rectangles (right endpoints).</div>
+            
+            <div class="extra-images">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 100'%3E%3Crect width='280' height='100' fill='%23fafafa'/%3E%3Ctext x='20' y='30' font-family='monospace' font-size='13'%3E∫ₐᵇ f(x) dx = F(b) − F(a)%3C/text%3E%3Ctext x='20' y='55' font-family='monospace' font-size='13'%3Ewhere F'(x) = f(x)%3C/text%3E%3Ctext x='20' y='80' font-family='monospace' font-size='13'%3EFundamental Theorem of Calculus%3C/text%3E%3C/svg%3E"
+                     alt="Fundamental Theorem of Calculus">
+                <div class="image-caption">The Fundamental Theorem connects differentiation and integration.</div>
+                
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 80'%3E%3Crect width='280' height='80' fill='%23fafafa'/%3E%3Ctext x='20' y='30' font-family='sans-serif'%3ENet area: ∫₋₁¹ x dx = 0%3C/text%3E%3Ctext x='20' y='55'%3ETotal area: ∫₋₁¹ |x| dx = 1%3C/text%3E%3C/svg%3E"
+                     alt="Net area vs total area">
+                <div class="image-caption">Net area (signed) vs. total area (absolute).</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>References</h3>
+            <ul class="references-list">
+                <li>
+                    <span class="ref-number">[1]</span>
+                    <a href="https://en.wikipedia.org/wiki/Integral" target="_blank">Wikipedia: Integral</a>
+                    <span class="ref-source"> – Comprehensive article on integration, including Riemann sums, definite integrals, and the Fundamental Theorem of Calculus. Accessed March 2026.</span>
+                </li>
+                <li>
+                    <span class="ref-number">[2]</span>
+                    <a href="https://en.wikipedia.org/wiki/Riemann_sum" target="_blank">Wikipedia: Riemann sum</a>
+                    <span class="ref-source"> – Detailed explanation of Riemann sums, including left, right, midpoint, and trapezoidal approximations with examples and error bounds.</span>
+                </li>
+                <li>
+                    <span class="ref-number">[3]</span>
+                    <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus" target="_blank">Wikipedia: Fundamental theorem of calculus</a>
+                    <span class="ref-source"> – Historical development and formal statement of both parts of the theorem, with proofs and applications.</span>
+                </li>
+                <li>
+                    <span class="ref-number">[4]</span>
+                    <a href="https://en.wikipedia.org/wiki/Mean_value_theorem" target="_blank">Wikipedia: Mean value theorem</a>
+                    <span class="ref-source"> – Includes the Mean Value Theorem for Integrals and the concept of average value of a function.</span>
+                </li>
+                <li>
+                    <span class="ref-number">[5]</span>
+                    <a href="https://en.wikipedia.org/wiki/Integral#Properties" target="_blank">Wikipedia: Properties of integrals</a>
+                    <span class="ref-source"> – Linearity, additivity, monotonicity, and other properties of definite integrals with explanations.</span>
+                </li>
+                <li>
+                    <span class="ref-number">[6]</span>
+                    <a href="https://en.wikipedia.org/wiki/Improper_integral" target="_blank">Wikipedia: Comparison theorem for improper integrals</a>
+                    <span class="ref-source"> – The comparison test for convergence and divergence of improper integrals.</span>
+                </li>
+            </ul>
+            <div class="footer-bottom">
+                <p>© 2026 NXpedia. Text available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 License</a>. Diagrams created for NXpedia.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
