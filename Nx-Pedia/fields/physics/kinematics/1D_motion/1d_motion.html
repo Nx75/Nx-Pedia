@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1D Motion – NXpedia</title>
+    <link rel="stylesheet" href="1d_motion.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="../../../../../index.html">NXpedia</a></div>
+        <nav>
+            <ul>
+                <li><a href="../../../../../assets/list_box.html">Explore</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">Search</a></li>
+                <li><a href="https://github.com/Nx75/Nx-Pedia.git" target="_blank">Contribute</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">About</a></li>
+                <li><a href="../../../../../assets/coming_soon.html">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-heading">
+        <h1>1D motion · rectilinear kinematics</h1>
+        <p>Displacement • Velocity • Acceleration • Equations of Motion • Free Fall • Uniform Motion</p>
+    </div>
+
+    <div class="main">
+        <div class="sidebar">
+            <h2>Contents</h2>
+            <a href="#background">Background</a>
+            <a href="#displacement">Displacement</a>
+            <a href="#velocity">Velocity</a>
+            <a href="#acceleration">Acceleration</a>
+            <a href="#formulation">Formulation</a>
+            <a href="#comparison">Comparison to rotational motion</a>
+            <a href="#references">References</a>
+        </div>
+
+        <div class="text-container">
+            <h2 id="background">Background</h2>
+            <p><strong>Linear motion</strong> (rectilinear motion) is one‑dimensional motion along a straight line,
+                described using a single spatial coordinate. Aristotle distinguished between natural and violent motion;
+                he argued that heavy bodies seek their natural place. Galileo later overturned Aristotelian ideas
+                through experiments with inclined planes, showing that in vacuum all bodies fall with the same constant
+                acceleration. In the 17th century, Newton formalised the laws of motion, establishing that a body
+                remains in uniform linear motion unless acted upon by a force. The study of linear motion forms the
+                foundation of kinematics and is essential for understanding Newton’s second law: <em>F = m a</em> along
+                the line of motion.</p>
+            <p>Rectilinear motion can be uniform (constant velocity) or non‑uniform (varying velocity). The geometry is
+                the simplest in physics: position <em>x(t)</em> is a function of time, and all other kinematic
+                quantities are derived from it. Historically, the description of free fall as constant‑acceleration
+                motion was a breakthrough, leading to the general equations of motion used today.</p>
+
+            <h2 id="displacement">Displacement</h2>
+            <p><strong>Displacement</strong> (<strong>Δx</strong>) is the vector that points from the initial position
+                to the final position. For motion along a straight line, its magnitude is the absolute difference of the
+                coordinates, and its sign indicates direction. Unlike distance (a scalar), displacement includes
+                directional information. For example, a particle moving from <em>x = +5 m</em> to <em>x = –3 m</em>
+                undergoes a displacement <em>Δx = –8 m</em>. In differential form, infinitesimal displacement is written
+                <em>dx</em>, and the total displacement over a time interval is the integral <em>∫ v dt</em>.</p>
+            <p>Displacement is independent of the path; in one dimension the path is the line segment itself, so
+                displacement magnitude equals distance only if motion never reverses. When analysing motion graphs, the
+                area under the velocity‑time curve gives displacement.</p>
+
+            <h2 id="velocity">Velocity</h2>
+            <p><strong>Average velocity</strong> is defined as displacement divided by elapsed time: <em>v<sub>avg</sub>
+                    = Δx / Δt</em>. <strong>Instantaneous velocity</strong> is the limit of this ratio as Δt → 0, i.e.
+                the derivative <em>v = dx/dt</em>. Velocity is a vector; its sign indicates direction along the chosen
+                axis. In uniform linear motion, velocity remains constant; for accelerated motion it varies. Speed is
+                the magnitude of velocity.</p>
+            <div class="rule-grid">
+                <div class="rule-card"><strong>Uniform linear motion</strong><span class="formula">v = constant</span>
+                    <p>Position changes linearly: <em>x(t) = x₀ + v t</em>. Acceleration is zero. Example: a train
+                        moving at 80 km/h on a straight track.</p>
+                </div>
+                <div class="rule-card highlight-card"><strong>Instantaneous velocity</strong><span class="formula">v =
+                        dx/dt</span>
+                    <p>Derived from the slope of the position–time graph. For non‑linear <em>x(t)</em>, velocity varies
+                        with time.</p>
+                </div>
+                <div class="rule-card"><strong>Average velocity vs. speed</strong><span
+                        class="formula">|v<sub>avg</sub>| ≤ speed</span>
+                    <p>For a round trip with returns, average velocity may be zero while average speed is positive.</p>
+                </div>
+            </div>
+
+            <h2 id="acceleration">Acceleration</h2>
+            <p><strong>Acceleration</strong> is the rate of change of velocity. Average acceleration:
+                <em>a<sub>avg</sub> = Δv / Δt</em>. Instantaneous acceleration: <em>a = dv/dt = d²x/dt²</em>. In one
+                dimension, positive acceleration means velocity is increasing in the positive direction; negative
+                acceleration (deceleration) reduces velocity. For constant acceleration, the equations of motion
+                simplify considerably. An important special case is free fall near Earth’s surface, where <em>a = –g =
+                    –9.81 m/s²</em> (if upward is positive).</p>
+            <p>Acceleration can also be expressed as <em>a = v (dv/dx)</em>, which is useful when time is not directly
+                involved. In mechanics, the net force along the line determines acceleration via Newton’s second law.
+            </p>
+
+            <h2 id="formulation">Formulation & equations of motion</h2>
+            <p>For constant acceleration (the most common idealisation in 1D problems), the following kinematic
+                relations hold. They are derived from the definitions of velocity and acceleration by integration,
+                assuming <em>a = constant</em>.</p>
+            <div class="rule-grid">
+                <div class="rule-card"><strong>1st equation</strong><span class="formula">v = v₀ + a t</span>
+                    <p>velocity as a function of time.</p>
+                </div>
+                <div class="rule-card"><strong>2nd equation</strong><span class="formula">x = x₀ + v₀ t + ½ a t²</span>
+                    <p>position as a function of time.</p>
+                </div>
+                <div class="rule-card"><strong>3rd equation</strong><span class="formula">v² = v₀² + 2a (x – x₀)</span>
+                    <p>time‑independent relation, useful when <em>t</em> is unknown.</p>
+                </div>
+            </div>
+            <p>These equations are valid only for constant acceleration. For variable acceleration, one must integrate:
+                <em>v(t) = v₀ + ∫ a(t) dt</em> and <em>x(t) = x₀ + ∫ v(t) dt</em>. In the case of simple harmonic motion
+                (e.g., mass‑spring), acceleration is proportional to negative displacement, leading to sinusoidal
+                solutions.</p>
+
+            <div class="elem-funcs">
+                <span class="section-head">Functional relations in 1D motion</span>
+                <table>
+                    <tr>
+                        <td>position <em>x(t)</em></td>
+                        <td>∫ v(t) dt + x₀</td>
+                    </tr>
+                    <tr>
+                        <td>velocity <em>v(t)</em></td>
+                        <td>dx/dt</td>
+                    </tr>
+                    <tr>
+                        <td>acceleration <em>a(t)</em></td>
+                        <td>dv/dt = d²x/dt²</td>
+                    </tr>
+                    <tr>
+                        <td>uniform motion</td>
+                        <td>x(t)=x₀+vt , a=0</td>
+                    </tr>
+                    <tr>
+                        <td>constant‑a motion</td>
+                        <td>v(t)=v₀+at, x(t)=x₀+v₀t+½at²</td>
+                    </tr>
+                    <tr>
+                        <td>position from acceleration</td>
+                        <td>x(t) = x₀ + v₀t + ∫(∫ a(t) dt) dt</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="info-box">
+                <div class="info-box-title"> Free fall – 1D motion under gravity (constant acceleration)</div>
+                <p>Near Earth’s surface and neglecting air resistance, free fall is rectilinear motion with constant
+                    acceleration <em>g = 9.81 m/s²</em> downward. Choosing upward as positive, <em>a = –g</em>. The
+                    equations become:</p>
+                <div class="info-box-example">v = v₀ – g t<br>y = y₀ + v₀ t – ½ g t²<br>v² = v₀² – 2g (y – y₀)</div>
+                <p>Maximum height (when v = 0): <em>h = v₀²/(2g)</em>. Total time of flight (if launch and landing at
+                    same height): <em>T = 2v₀/g</em>. Galileo famously deduced that all objects fall with the same
+                    acceleration by rolling balls on inclined planes (which effectively “dilute” gravity).</p>
+            </div>
+
+            <h2 id="comparison">Comparison to rotational motion</h2>
+            <p>Linear motion differs fundamentally from rotational motion. In rotation, every particle moves in a circle
+                about an axis; quantities like angular displacement (<em>θ</em>), angular velocity (<em>ω = dθ/dt</em>),
+                and angular acceleration (<em>α = dω/dt</em>) replace the linear variables. There is a direct
+                mathematical analogy: <em>θ ↔ x</em>, <em>ω ↔ v</em>, <em>α ↔ a</em>, and the rotational equations for
+                constant <em>α</em> are <em>ω = ω₀ + α t</em>, <em>θ = θ₀ + ω₀ t + ½ α t²</em>. However, rotational
+                motion also involves centripetal acceleration (<em>a<sub>c</sub> = ω² r</em>) directed toward the axis,
+                which has no counterpart in rectilinear motion. In pure linear motion, acceleration is always parallel
+                or anti‑parallel to velocity.</p>
+            <p>Another distinction: in rotation, different points on a rigid body have different linear velocities but
+                the same angular velocity. The background of linear motion is often taught first because it introduces
+                kinematic concepts without the complication of circular geometry.</p>
+
+            <p><strong>Further aspects of 1D motion:</strong> In addition to free fall, examples include a car braking
+                uniformly, a train speeding up with constant acceleration, or an object thrown vertically upward. The
+                sign convention (which direction is positive) must be stated clearly. Problems often involve two objects
+                meeting, or motion with piecewise constant acceleration (e.g., a rocket that accelerates, then coasts).
+                Graphical analysis: slope of <em>x‑t</em> gives velocity, slope of <em>v‑t</em> gives acceleration, area
+                under <em>v‑t</em> gives displacement, area under <em>a‑t</em> gives change in velocity. For
+                non‑constant acceleration, numerical integration may be required.</p>
+            <p>Modern applications: particle accelerators (linear motion of charged particles), elevators, conveyor
+                belts, and any system that can be approximated as moving along a straight line. The concepts also extend
+                to general curvilinear motion by considering tangential and normal components, but the one‑dimensional
+                treatment remains the core building block.</p>
+        </div>
+
+        <div class="data-container">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 120'%3E%3Crect width='280' height='120' fill='%23f2f2f2'/%3E%3Cpath d='M40 60 L240 60' stroke='%23333' stroke-width='2' stroke-dasharray='4 2' /%3E%3Ccircle cx='70' cy='60' r='6' fill='%231e3a5f' /%3E%3Ctext x='60' y='45' font-family='Inter' font-size='10' fill='black'%3Ex₁%3C/text%3E%3Ccircle cx='190' cy='60' r='6' fill='%233182ce' /%3E%3Ctext x='180' y='45' font-family='Inter' font-size='10'%3Ex₂%3C/text%3E%3Cpath d='M70 60 L190 60' stroke='%23c0392b' stroke-width='3' /%3E%3Ctext x='120' y='80' font-family='Inter' font-size='12' fill='%23c0392b'%3EΔx = displacement%3C/text%3E%3C/svg%3E"
+                alt="1D displacement diagram">
+            <div class="image-caption">Figure 1: Displacement Δx along straight line (x₁ → x₂).</div>
+            <div class="extra-images">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 130'%3E%3Crect width='280' height='130' fill='%23e8eef2'/%3E%3Ctext x='20' y='30' font-family='Inter' font-size='14' fill='%23000'%3Ev–t graph (constant a)%3C/text%3E%3Cpath d='M40 90 L240 90' stroke='%23999' stroke-width='1' /%3E%3Cpath d='M40 90 L220 30' stroke='%232c3e50' stroke-width='3' /%3E%3Ccircle cx='40' cy='90' r='3' fill='black' /%3E%3Ctext x='30' y='100' font-size='9'%3Et₀%3C/text%3E%3C/svg%3E"
+                    alt="velocity‑time graph">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 130'%3E%3Crect width='280' height='130' fill='%23f5eee6'/%3E%3Ctext x='20' y='30' font-family='Inter' font-size='14'%3Efree fall stroboscope%3C/text%3E%3Ccircle cx='100' cy='100' r='5' fill='%23333' /%3E%3Ccircle cx='140' cy='70' r='5' fill='%23333' /%3E%3Ccircle cx='180' cy='40' r='5' fill='%23333' /%3E%3Cpath d='M100 100 L140 70 L180 40' stroke='%23a94442' stroke-width='2' /%3E%3C/svg%3E"
+                    alt="free fall positions">
+                <div class="image-caption">Figure 2: Velocity‑time (top) and free‑fall positions (bottom).</div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="references">
+        <div class="footer-content">
+            <h3>References</h3>
+            <ul class="references-list">
+                <li><span class="ref-number">[1]</span><span class="ref-title">"Linear motion"</span><span
+                        class="ref-source">Wikipedia, The Free Encyclopedia, 2025. Background section: "Aristotle,
+                        Galileo and the concept of rectilinear motion."</span><a
+                        href="https://en.wikipedia.org/wiki/Linear_motion#Background"
+                        target="_blank">https://en.wikipedia.org/wiki/Linear_motion#Background</a></li>
+                <li><span class="ref-number">[2]</span><span class="ref-title">"Equations of motion (constant
+                        acceleration)"</span><span class="ref-source">Derived from the kinematic relations cited in the
+                        background of linear motion.</span><a
+                        href="https://en.wikipedia.org/wiki/Linear_motion#Background" target="_blank">↗</a></li>
+                <li><span class="ref-number">[3]</span><span class="ref-title">Comparison with rotational
+                        motion</span><span class="ref-source">Based on analogies mentioned in the same background
+                        context.</span><a href="https://en.wikipedia.org/wiki/Linear_motion#Background"
+                        target="_blank">read</a></li>
+                <li><span class="ref-number">[4]</span><span class="ref-title">Galileo's inclined planes</span><span
+                        class="ref-source">Historical background from the Wikipedia article.</span><a
+                        href="https://en.wikipedia.org/wiki/Linear_motion#Background" target="_blank">link</a></li>
+            </ul>
+            <div class="footer-bottom">
+                <p>Content derived from Wikipedia articles on <a
+                        href="https://en.wikipedia.org/wiki/Linear_motion" target="_blank">1D Motion</a> and related topics. Licensed under <a
+                        href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
